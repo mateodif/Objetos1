@@ -1,5 +1,5 @@
-!classDefinition: #BonoPorCategoría category: 'Ejercicio 3'!
-DenotativeObject subclass: #BonoPorCategoría
+!classDefinition: #BonoPorCategoria category: 'Ejercicio 3'!
+DenotativeObject subclass: #BonoPorCategoria
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -7,13 +7,13 @@ DenotativeObject subclass: #BonoPorCategoría
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
-!classDefinition: 'BonoPorCategoría class' category: 'Ejercicio 3'!
-BonoPorCategoría class
+!classDefinition: 'BonoPorCategoria class' category: 'Ejercicio 3'!
+BonoPorCategoria class
 	instanceVariableNames: ''!
 
-!BonoPorCategoría class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:29:27'!
-bono: categoría
-	^(categoría bonoSimple) + (categoría bonoPorcentual).! !
+!BonoPorCategoria class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 16:48:12'!
+bono: categoria
+	^(categoria bonoSimple) + (categoria bonoPorcentual).! !
 
 
 !classDefinition: #BonoPorPresentismo category: 'Ejercicio 3'!
@@ -29,9 +29,9 @@ DenotativeObject subclass: #BonoPorPresentismo
 BonoPorPresentismo class
 	instanceVariableNames: ''!
 
-!BonoPorPresentismo class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:18:42'!
-bono: categoría vecesQueFaltó: vecesQueFaltó
-	^((2000 * peso) - (vecesQueFaltó * (100 * peso))) max: 0.! !
+!BonoPorPresentismo class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 15:08:53'!
+bono: categoria vecesQueFalto: vecesQueFalto
+	^((2000 * peso) - (vecesQueFalto * (100 * peso))) max: 0.! !
 
 
 !classDefinition: #BonoPorResultados category: 'Ejercicio 3'!
@@ -47,13 +47,13 @@ DenotativeObject subclass: #BonoPorResultados
 BonoPorResultados class
 	instanceVariableNames: ''!
 
-!BonoPorResultados class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:11:04'!
-bono: categoría
-	^(3000 * peso) + ((categoría sueldoBásico) * 0,1)! !
+!BonoPorResultados class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 16:48:24'!
+bono: categoria
+	^(3000 * peso) + ((categoria sueldoBasico) * 0.1)! !
 
 
-!classDefinition: #CategoríaCadete category: 'Ejercicio 3'!
-DenotativeObject subclass: #CategoríaCadete
+!classDefinition: #CategoriaCadete category: 'Ejercicio 3'!
+DenotativeObject subclass: #CategoriaCadete
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -61,25 +61,25 @@ DenotativeObject subclass: #CategoríaCadete
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
-!classDefinition: 'CategoríaCadete class' category: 'Ejercicio 3'!
-CategoríaCadete class
+!classDefinition: 'CategoriaCadete class' category: 'Ejercicio 3'!
+CategoriaCadete class
 	instanceVariableNames: ''!
 
-!CategoríaCadete class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:22:51'!
+!CategoriaCadete class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 16:48:37'!
 bonoPorcentual
-	^(self sueldoBásico) * 0,05.! !
+	^(self sueldoBasico) * 0.05.! !
 
-!CategoríaCadete class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:38:14'!
+!CategoriaCadete class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:38:14'!
 bonoSimple
 	^5000 * peso.! !
 
-!CategoríaCadete class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:07:59'!
-sueldoBásico
+!CategoriaCadete class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 15:06:50'!
+sueldoBasico
 	^75000 * peso.! !
 
 
-!classDefinition: #CategoríaGerente category: 'Ejercicio 3'!
-DenotativeObject subclass: #CategoríaGerente
+!classDefinition: #CategoriaGerente category: 'Ejercicio 3'!
+DenotativeObject subclass: #CategoriaGerente
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
@@ -87,20 +87,20 @@ DenotativeObject subclass: #CategoríaGerente
 
 "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
 
-!classDefinition: 'CategoríaGerente class' category: 'Ejercicio 3'!
-CategoríaGerente class
+!classDefinition: 'CategoriaGerente class' category: 'Ejercicio 3'!
+CategoriaGerente class
 	instanceVariableNames: ''!
 
-!CategoríaGerente class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:22:06'!
+!CategoriaGerente class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 16:48:03'!
 bonoPorcentual
-	^(self sueldoBásico) * 0,2.! !
+	^(self sueldoBasico) * 0.2.! !
 
-!CategoríaGerente class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:38:33'!
+!CategoriaGerente class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:38:33'!
 bonoSimple
 	^(5000 + 2000) * peso.! !
 
-!CategoríaGerente class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:08:25'!
-sueldoBásico
+!CategoriaGerente class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 15:06:50'!
+sueldoBasico
 	^100000 * peso.! !
 
 
@@ -137,48 +137,89 @@ DenotativeObject subclass: #Pepe
 
 !classDefinition: 'Pepe class' category: 'Ejercicio 3'!
 Pepe class
-	instanceVariableNames: 'categoría vecesQueFaltó'!
+	instanceVariableNames: 'vecesQueFalto categoriaSueldo categoriaBono'!
 
-!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:41:11'!
+!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 17:31:54'!
+categoriaBono
+	^categoriaBono.! !
+
+!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 17:31:43'!
+categoriaSueldo
+	^categoriaSueldo.! !
+
+!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 17:32:12'!
+contratarComo: cat
+	categoriaSueldo := cat.
+	categoriaBono := cat.
+	vecesQueFalto := 0.! !
+
+!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 15:09:34'!
 faltar
-	vecesQueFaltó := vecesQueFaltó + 1.! !
+	vecesQueFalto := vecesQueFalto + 1.! !
 
-!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:40:34'!
-nacer: cat
-	categoría := cat.
-	vecesQueFaltó := 0.
-	! !
-
-!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 13:49:32'!
+!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 17:31:43'!
 recategorizar: nuevaCategoria 
-	categoria := nuevaCategoria.! !
+	categoriaSueldo := nuevaCategoria.! !
 
-!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:23:59'!
-sueldoBásico
-	^(self categoría) sueldoBásico.! !
+!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 17:31:26'!
+sueldoBasico
+	^(self categoriaSueldo) sueldoBasico.! !
 
-!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:35:52'!
+!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 15:06:50'!
 sueldoBruto
-	^(self sueldoBásico) + (self totalPorBonos).! !
+	^(self sueldoBasico) + (self totalPorBonos).! !
 
 !Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:37:00'!
 sueldoNeto
 	^(self sueldoBruto) - (self sueldoBruto) * (DescuentosPorAportesYContribuciones porcentajeDeDescuentoTotal).! !
 
-!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:32:27'!
+!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 17:32:37'!
 totalPorBonos
-	^(BonoPorCategoría bono: (self categoría)) + (BonoPorPresentismo bono: (self categoría) vecesQueFaltó: (self vecesQueFaltó)) + (BonoPorResultados bono: (self categoría)).! !
+	^(BonoPorCategoria bono: (self categoriaBono)) + (BonoPorPresentismo bono: (self categoriaBono) vecesQueFalto: (self vecesQueFalto)) + (BonoPorResultados bono: (self categoriaBono)).! !
 
-!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 8/23/2023 14:31:07'!
-vecesQueFaltó
-	^vecesQueFaltó.! !
+!Pepe class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 15:09:34'!
+vecesQueFalto
+	^vecesQueFalto.! !
 
 
-!Pepe class methodsFor: '--** private fileout/in **--' stamp: 'MD 8/23/2023 14:48:52'!
+!Pepe class methodsFor: '--** private fileout/in **--' stamp: 'MD 9/6/2023 17:33:31'!
 initializeCollaboratorsFromFile
 	"Auto generated method for loading purposes - Do not modify it"
 
-	categoría := nil.
-	vecesQueFaltó := nil.! !
+	vecesQueFalto := 0.
+	categoriaSueldo := CategoriaCadete.
+	categoriaBono := CategoriaGerente.! !
+
+
+!classDefinition: #testsDeEjercicio3 category: 'Ejercicio 3'!
+DenotativeObject subclass: #testsDeEjercicio3
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'Ejercicio 3'!
+
+"-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- "!
+
+!classDefinition: 'testsDeEjercicio3 class' category: 'Ejercicio 3'!
+testsDeEjercicio3 class
+	instanceVariableNames: ''!
+
+!testsDeEjercicio3 class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 16:36:42'!
+test_01_elBasicoDeGerenteEsCienMil
+	Assert that: (CategoriaGerente sueldoBasico) isEqualTo: 100000 * peso. ! !
+
+!testsDeEjercicio3 class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 16:36:32'!
+test_02_elBasicoDeCadeteEsSetentaYCincoMil
+	Assert that: (CategoriaCadete sueldoBasico) isEqualTo: 75000 * peso. ! !
+
+!testsDeEjercicio3 class methodsFor: 'as yet unclassified' stamp: 'MD 9/6/2023 16:46:26'!
+test_03_SiPepeEsRecategorizado_MantieneLosBonosComoEstabanAntes
+	| bonosAntesDeRecategorizacion |
+	Pepe contratarComo: CategoriaGerente.
+	bonosAntesDeRecategorizacion := Pepe totalPorBonos.
+	
+	Pepe recategorizar: CategoriaCadete.
+	
+	Assert that: Pepe totalPorBonos isEqualTo: bonosAntesDeRecategorizacion.! !
 
 Pepe initializeAfterFileIn!
